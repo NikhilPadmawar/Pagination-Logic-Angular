@@ -1,0 +1,12 @@
+<div class="flex-container">
+  <div *ngFor="let x of pokemonObj">
+    Name: {{x}}
+  </div>
+</div>
+<div class="button">
+  <a (click)="prevPage()" id="btn_prev" *ngIf="current_page!=1">Prev</a>
+  <a (click)="nextPage()" id="btn_next" *ngIf="lastPage==undefined">Next</a>
+</div>
+<div class="page">
+  Page: <span id="page">{{current_page}}</span>
+</div>
